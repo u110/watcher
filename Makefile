@@ -49,4 +49,4 @@ build/%:
 			 go build -o $(CURDIR)/binaries/$(*)/watcher
 
 download-links:
-	find binaries | grep watcher | xargs -I{} sh -c 'echo - [{}]\(https://github.com/u110/watcher/raw/master/{}\)'
+	@find binaries | grep watcher | xargs -I{} sh -c 'echo - [{}]\(https://github.com/u110/watcher/raw/master/{}\)' | sort

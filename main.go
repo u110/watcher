@@ -29,6 +29,7 @@ func watch(target string, cmdStr string) {
 	log.Println("last modified:", last)
 
 	for {
+		// TODO(u11): use parameter
 		time.Sleep(time.Duration(5) * time.Second)
 		current := GetFileModTime(filename)
 		if current.After(last) {
